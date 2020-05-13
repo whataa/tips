@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://linjiang.tech/tips/atom.xml</id>
+    <title>linjiang&apos;s tips</title>
+    <updated>2020-05-13T02:59:06Z</updated>
+    <author>
+        <name>linjiang</name>
+        <email>linjiang.me@gmail.com</email>
+        <uri>linjiang</uri>
+    </author>
+    <link rel="alternate" href="https://linjiang.tech/tips/"/>
+    <generator>Feed for Node.js</generator>
+    <entry>
+        <title type="html"><![CDATA[创刊 · 卷首语]]></title>
+        <id>https://linjiang.tech/tips/index.html</id>
+        <link href="https://linjiang.tech/tips/index.html">
+        </link>
+        <updated>2020-05-13T02:59:03Z</updated>
+        <content type="html"><![CDATA[<center>基于 Gitbook 3.2.3 但谈不上感谢，毫无文档可言🙂</center>
+
+<p><br></p>
+<h3>言归正传</h3>
+<p>当前 book 作为 <a href="https://linjiang.tech">linjiang.tech</a> 博客的补充，充当一个知识小集锦的作用。</p>
+]]></content>
+        <published>2020-05-12T10:00:00Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[raw size 和 download size 的区别]]></title>
+        <id>https://linjiang.tech/tips/src/apk-size-diff.html</id>
+        <link href="https://linjiang.tech/tips/src/apk-size-diff.html">
+        </link>
+        <updated>2020-05-13T02:42:37Z</updated>
+        <content type="html"><![CDATA[<p>参照<a href="https://developer.android.com/studio/build/apk-analyzer#view_file_and_size_information">官方文档</a> 的解释：</p>
+<ul>
+<li>Raw File Size 表示实体在磁盘上未经压缩时的大小；</li>
+<li>Download Size 则表示实体由 Google Play 提供时估计压缩后的大小；</li>
+</ul>
+<p>这是因为生成的 apk 上传至 google play 后会被再次处理（压缩）以减少网络传输数据量，待手机端下载完成后被还原为原始文件。</p>
+<p>也就是说 <code>raw size</code> 就是apk的本身大小（当然也并非解压后的目录大小）；
+<code>download size</code> 就是实际下载时消耗的流量大小。</p>
+]]></content>
+        <published>2020-04-25T10:00:00Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[.ap_ 文件的作用]]></title>
+        <id>https://linjiang.tech/tips/src/ap.html</id>
+        <link href="https://linjiang.tech/tips/src/ap.html">
+        </link>
+        <updated>2020-05-13T02:58:52Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li><p>AAPT2 将AAPT 对资源的编译拆分细化为了 <code>compile</code> 和 <code>link</code> 两个步骤，以更好地提升编译速度（增量编译）。</p>
+</li>
+<li><p>其中 link 的结果除了生成 <code>R.java</code> 外，还生成了 <code>.ap_</code> 产物（本质上是zip），包含 <code>manifest</code> 清单、所有资源文件以及资源索引表<code>arsc</code>。</p>
+</li>
+<li><p>当执行 package-task 生成 .apk 时并不是解压.ap<em>文件得到相关资源再与dex重新压缩，而是以 <strong>copy zip entry</strong> 的形式直接拷贝到最终的apk文件。也就是说，.ap</em> 文件中各个entry的压缩效果与apk中一致。</p>
+</li>
+</ul>
+]]></content>
+        <published>2020-04-20T10:00:00Z</published>
+    </entry>
+</feed>

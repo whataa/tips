@@ -1,0 +1,27 @@
+{% extends template.self %}
+
+{% block book_sidebar %}
+    {% block book_summary %}
+        <nav role="navigation">
+        {% include "website/summary.html" %}
+        </nav>
+    {% endblock %}
+{% endblock %}
+
+{% block body %}
+    <div class="body-main">
+        <div class="myNav">
+            <div id="nav-left">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <div class="nav-btn name">Home</div>
+                <div class="nav-btn drawer"><i class="fa fa-align-justify"></i></div>
+            </div>
+            <div class="nav-btn rss"><i class="fa fa-rss"></i></div>
+            <div class="nav-btn github"><i class="fa fa-github"></i></div>
+            {% block search_input %}{% endblock %}
+        </div>
+        {{ super() }}
+    </div>
+{% endblock %}

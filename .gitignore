@@ -1,0 +1,8 @@
+deploy.js
+index.js
+plugin
+package-lock.json
+package.json
+node_modules
+.vscode
+.DS_Store
