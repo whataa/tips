@@ -1,0 +1,292 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>.ap_ 文件的作用 · linjiang</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="linjiang.me@gmail.com">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mysite/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mysite/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="apk-size-diff.html" />
+    
+
+    </head>
+    <body>
+        
+    <div class="body-main">
+        <div class="myNav">
+            <div id="nav-left">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <div class="nav-btn name">Home</div>
+                <div class="nav-btn drawer"><i class="fa fa-align-justify"></i></div>
+            </div>
+            <div class="nav-btn rss"><i class="fa fa-rss"></i></div>
+            <div class="nav-btn github"><i class="fa fa-github"></i></div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+        </div>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    
+        <nav role="navigation">
+        
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    facebook hermes 编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2020</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="tips.html">
+            
+                <a href="tips.html">
+            
+                    
+                    创刊 · 卷首语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="apk-size-diff.html">
+            
+                <a href="apk-size-diff.html">
+            
+                    
+                    raw size 和 download size 的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="ap.html">
+            
+                <a href="ap.html">
+            
+                    
+                    .ap_ 文件的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+        </nav>
+    
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >.ap_ 文件的作用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <ul>
+<li><p>AAPT2 &#x5C06;AAPT &#x5BF9;&#x8D44;&#x6E90;&#x7684;&#x7F16;&#x8BD1;&#x62C6;&#x5206;&#x7EC6;&#x5316;&#x4E3A;&#x4E86; <code>compile</code> &#x548C; <code>link</code> &#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x4EE5;&#x66F4;&#x597D;&#x5730;&#x63D0;&#x5347;&#x7F16;&#x8BD1;&#x901F;&#x5EA6;&#xFF08;&#x589E;&#x91CF;&#x7F16;&#x8BD1;&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x5176;&#x4E2D; link &#x7684;&#x7ED3;&#x679C;&#x9664;&#x4E86;&#x751F;&#x6210; <code>R.java</code> &#x5916;&#xFF0C;&#x8FD8;&#x751F;&#x6210;&#x4E86; <code>.ap_</code> &#x4EA7;&#x7269;&#xFF08;&#x672C;&#x8D28;&#x4E0A;&#x662F;zip&#xFF09;&#xFF0C;&#x5305;&#x542B; <code>manifest</code> &#x6E05;&#x5355;&#x3001;&#x6240;&#x6709;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x8D44;&#x6E90;&#x7D22;&#x5F15;&#x8868;<code>arsc</code>&#x3002;</p>
+</li>
+<li><p>&#x5F53;&#x6267;&#x884C; package-task &#x751F;&#x6210; .apk &#x65F6;&#x5E76;&#x4E0D;&#x662F;&#x89E3;&#x538B;.ap<em>&#x6587;&#x4EF6;&#x5F97;&#x5230;&#x76F8;&#x5173;&#x8D44;&#x6E90;&#x518D;&#x4E0E;dex&#x91CD;&#x65B0;&#x538B;&#x7F29;&#xFF0C;&#x800C;&#x662F;&#x4EE5; <strong>copy zip entry</strong> &#x7684;&#x5F62;&#x5F0F;&#x76F4;&#x63A5;&#x62F7;&#x8D1D;&#x5230;&#x6700;&#x7EC8;&#x7684;apk&#x6587;&#x4EF6;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;.ap</em> &#x6587;&#x4EF6;&#x4E2D;&#x5404;&#x4E2A;entry&#x7684;&#x538B;&#x7F29;&#x6548;&#x679C;&#x4E0E;apk&#x4E2D;&#x4E00;&#x81F4;&#x3002;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="apk-size-diff.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: raw size 和 download size 的区别">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":".ap_ 文件的作用","date":"2020-04-20T10:00:00.000Z","level":"2.3","depth":1,"previous":{"title":"raw size 和 download size 的区别","level":"2.2","depth":1,"path":"src/apk-size-diff.md","ref":"src/apk-size-diff.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-livereload","-sharing","-lunr","-search","search-pro","mysite"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mysite":{"github":"whataa","blog_url":"https://linjiang.tech/","tips_url":"https://linjiang.tech/tips/","tips_name":"linjiang","rss":{"title":"linjiang's tips","author":{"name":"linjiang","email":"linjiang.me@gmail.com","link":"https://github.com/whataa"}}},"fontsettings":{"theme":"white","family":"sans","size":1},"search-pro":{},"highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","deploy_repo":"https://x-access-token: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@github.com/whataa/tips","author":"linjiang.me@gmail.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"linjiang","gitbook":"*","description":"linjiang's tips"},"file":{"path":"src/ap.md","mtime":"2023-01-13T08:47:26.409Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-13T08:48:03.608Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+    </div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mysite/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

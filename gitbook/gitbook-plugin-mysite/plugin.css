@@ -1,0 +1,167 @@
+/* *************************** actionbar ********************************** */
+.myNav {
+    background-color: #e3e3e3;
+    height: 34px !important;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#nav-left {
+    position: absolute;
+    left: 0;
+    margin-left: 8px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.dot {
+    margin-left: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.red {
+    background: #ed6a5f;
+}
+.yellow {
+    background: #f6be50;
+}
+.green {
+    background: #62c655;
+}
+.nav-btn.name {
+    margin-left: 16px;
+    width: inherit;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+    color: #565656;
+    font-weight: 500;
+    padding-bottom: 2px;
+}
+.nav-btn {
+    width: 36px;
+    height: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nav-btn i {
+    color: #565656;
+}
+.myNav #book-search-input {
+    width: 220px; 
+    height: 20px;   
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0px 8px 0px 8px;
+    margin: 0;
+    opacity: 0.9;
+}
+.myNav #book-search-input input {
+    line-height: inherit;
+    padding: 0;
+    font-size: 12px;
+    height: 100%;
+}
+
+
+/* *************************** 全局layout ********************************** */
+
+.body-main {
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 600px) {
+    #nav-left {
+        margin-left: 0;
+    }
+    .dot {
+        display: none;
+    }
+    .myNav #book-search-input {
+        width: 100px; 
+    }
+    .book.with-summary {
+        overflow:hidden;
+    }
+
+    .book.with-summary .book-body {
+        -moz-transform: inherit !important;
+        -ms-transform: inherit !important;
+        -o-transform: inherit !important;
+        transform: inherit !important;
+    }
+}
+@media (min-width: 960px) {
+    /* 固定宽高，高度(584) = header(34) + book(550) */
+    .book {
+        height: 550px;
+    }
+    .body-main {
+        position: absolute;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+        margin: auto;
+        width: 960px;
+        height: 584px;
+    }
+}
+
+/* ****************************** summary增加时间并调整样式 ************************************** */
+.book-summary ul.summary li.divider {
+    display: none;
+}
+.book-summary ul.summary li.active {
+  background-color: #f9e197;
+}
+.book-summary ul.summary li {
+    
+}
+li.chapter {
+    height: 56px;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+}
+/* 添加before和after伪元素以使flex布局下的title和date居中 */
+li.chapter::after {
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+}
+li.chapter::before {
+    content: '';
+}
+li.chapter a, li.chapter span {
+    font-weight: 550;
+    font-size: 13px;
+    margin-top: auto;
+    margin-right: 16px;
+    margin-bottom: 2px;
+    padding: 0 !important;
+    color: #262626 !important;
+}
+li.chapter div {
+    font-size: 12px;
+    margin-bottom: auto;
+    margin-top: 2px;
+}

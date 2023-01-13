@@ -1,0 +1,99 @@
+.book {
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+}
+.book-summary {
+  width: 0px;
+  left: 0;
+  -webkit-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -o-transition: width 250ms ease;
+  transition: width 250ms ease
+}
+/* 侧边宽度 */
+.book.with-summary .book-summary {
+    width: 250px;
+}
+.book.with-summary .book-body {
+    left: 250px !important;
+}
+
+
+.book-header h1 {
+    display: block !important;
+    opacity: 1 !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+    font-size: 18px !important;
+}
+/* 移除侧栏开关和字体调节按钮 */
+.gitbook-link, .pull-left {
+  display: none !important;
+}
+/* 移除page左右翻页 */
+.navigation {
+    display: none !important;
+}
+
+
+@media (min-width: 960px) {
+  
+  /* page边距 */
+  .page-inner {
+      padding: 20px 35px 20px 35px;
+  }
+}
+
+/**********************************************************************************/
+/*******************************字体相关设置*****************************************/
+
+/*fontsettings中0~4级的字体大小：修改lv1的字体大小*/
+.book.font-size-1 .book-body .page-inner section {
+  font-size: 1.35rem;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  text-align: justify;
+  line-height: 1.8;
+  color: #222;
+}
+/* #标题头的大小 */
+.markdown-section h1,.markdown-section h2,.markdown-section h3,.markdown-section h4,.markdown-section h5,.markdown-section h6 {
+  margin-top: 1.275em;
+  margin-bottom: .85em;
+  font-weight: bold
+}
+
+.markdown-section h1 {
+  font-size: 1.5em
+}
+
+.markdown-section h2 {
+  font-size: 1.375em
+}
+
+.markdown-section h3 {
+  font-size: 1.25em
+}
+
+.markdown-section h4 {
+  font-size: 1.125em
+}
+
+.markdown-section h5 {
+  font-size: 1em
+}
+
+.markdown-section h6 {
+  font-size: 0.875em;
+}
+
+/* ``引用的底色 */
+.markdown-section code {
+  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  background: #eee;
+  border-radius: 3px;
+  color: #555;
+}
+
+/**********************************************************************************/
+/**********************************************************************************/
